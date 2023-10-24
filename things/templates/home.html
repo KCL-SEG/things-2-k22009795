@@ -1,11 +1,22 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Things</title>
 </head>
 <body>
-  <h1>
-    Things
-  </h1>
-  <p>Some stuff about things goes here.</p>
+  <h1>Things Form</h1>
+  <form method="POST" action="">
+    {% csrf_token %}
+    <label for="Name">Name:</label>
+    <input id="Name" type="text" name="name"><br>
+
+    <label for="Description">Description:</label>
+    <input id="Description" type="text" name="description"><br>
+
+    <label for="Quantity">Quantity:</label>
+    <input id="Quantity" type="number" name="quantity"><br>
+
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
