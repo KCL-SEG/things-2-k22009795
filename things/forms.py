@@ -5,4 +5,4 @@ class ThingForm(forms.ModelForm):
     class Meta:
         model = Thing
         fields = ['name', 'description', 'quantity']
-        exclude = {'created_at'}
+        widgets = {'description', 'quantity'}
