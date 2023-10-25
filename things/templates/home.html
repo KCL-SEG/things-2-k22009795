@@ -5,17 +5,9 @@
 </head>
 <body>
   <h1>Things Form</h1>
-  <form method="POST" action="">
+  <form action= "{% url 'home' %}" method="POST">
     {% csrf_token %}
-    <label for="Name">Name:</label>
-    <input id="id_name" type="text" name="name"><br>
-
-    <label for="Description">Description:</label>
-    <textarea id="id_description" name="description" maxlength="120"></textarea><br>
-
-    <label for="Quantity">Quantity:</label>
-    <input id="id_quantity" type="number" name="quantity"><br>
-
+    {{form.as_p}}
     <input type="submit" value="Submit">
   </form>
 </body>
